@@ -9,6 +9,7 @@ _Last generated: 2026-04-15_
 | Team | Slug | Status | Version | Owner | Description |
 |---|---|---|---|---|---|
 | shared | [`example-skill`](../skills/shared/example-skill/) | stable | 1.0.0 | @jonathanvu | Reference example showing correct frontmatter + structure for momo-ai-kit skills. |
+| shared | [`synthesis-writer`](../skills/shared/synthesis-writer/) | stable | 1.0.0 | @jonathanvu | Write structured synthesis from raw inputs (meeting transcripts, research articles, YouTube, papers). |
 
 ## Agents
 
