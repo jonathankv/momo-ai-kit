@@ -1,0 +1,29 @@
+# CODEOWNERS — Light-touch governance (giai đoạn 1)
+# Rule: mỗi team self-merge trong folder của mình.
+# Chỉ settings/ và install.sh cần owner approve (impact rộng).
+
+# Default — repo owner review (fallback)
+*                       @jonathanvu
+
+# Team folders — replace với team handles thực tế
+/skills/product/        @jonathanvu
+/skills/engineering/    @jonathanvu
+/skills/data/           @jonathanvu
+/skills/risk/           @jonathanvu
+/skills/marketing/      @jonathanvu
+/skills/design/         @jonathanvu
+
+# Shared skills — cần thêm review vì impact cross-team
+/skills/shared/         @jonathanvu
+
+# Agents — theo team
+/agents/product/        @jonathanvu
+/agents/engineering/    @jonathanvu
+/agents/shared/         @jonathanvu
+
+# Impact rộng — cần owner approve
+/settings/              @jonathanvu
+/scripts/install.sh     @jonathanvu
+/scripts/uninstall.sh   @jonathanvu
+/.github/               @jonathanvu
+/docs/conventions.md    @jonathanvu

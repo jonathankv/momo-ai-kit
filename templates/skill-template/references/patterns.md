@@ -1,0 +1,13 @@
+# Patterns
+
+_Detailed patterns, rules, or content that doesn't fit in SKILL.md (keep SKILL.md < 400 lines)._
+
+## Pattern 1: [Name]
+
+**When:** ...
+**How:** ...
+**Example:** ...
+
+## Pattern 2: [Name]
+
+...

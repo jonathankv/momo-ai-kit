@@ -1,0 +1,29 @@
+{
+  "_comment": "Base settings for MoMo team. Merge relevant sections into your ~/.claude/settings.json manually. Do NOT commit personal API keys or local paths.",
+  "permissions": {
+    "allow": [
+      "Bash(git:*)",
+      "Bash(npm:*)",
+      "Bash(pnpm:*)",
+      "Bash(yarn:*)",
+      "Bash(python:*)",
+      "Bash(pytest:*)",
+      "Read(*)",
+      "Write(*)",
+      "Edit(*)",
+      "Grep(*)",
+      "Glob(*)"
+    ],
+    "deny": [
+      "Bash(rm -rf /*)",
+      "Bash(curl *|*sh)",
+      "Bash(wget *|*sh)"
+    ]
+  },
+  "env": {
+    "_comment_env": "Add MoMo-specific env vars here. Do NOT hardcode secrets — reference via ${ENV_VAR}."
+  },
+  "hooks": {
+    "_comment_hooks": "See hooks/ folder for reusable hook snippets."
+  }
+}
