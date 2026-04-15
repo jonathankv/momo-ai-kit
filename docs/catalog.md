@@ -8,6 +8,13 @@ _Last generated: 2026-04-15_
 
 | Team | Slug | Status | Version | Owner | Description |
 |---|---|---|---|---|---|
+| product | [`decision-making`](../skills/product/decision-making/) | research-preview | 0.1.0 | @jonathankv | Help people make better decisions using evidence-based frameworks, bias detection, and experiment design. |
+| product | [`jtbd`](../skills/product/jtbd/) | research-preview | 0.1.0 | @jonathankv | Apply Jobs to Be Done framework to discover what customers truly hire products for. |
+| product | [`product-discovery`](../skills/product/product-discovery/) | research-preview | 0.1.0 | @jonathankv | Help PMs run rigorous product discovery — from problem framing to opportunity sizing to insight synthesis. |
+| product | [`product-growth`](../skills/product/product-growth/) | research-preview | 0.1.0 | @jonathankv | Diagnose and design growth — retention, acquisition, activation, monetization, PLG, virality, experimentation. |
+| product | [`product-manager`](../skills/product/product-manager/) | research-preview | 0.1.0 | @jonathankv | Core PM advisor — structured reasoning, prioritization, experiment design, metrics, stakeholder communication. |
+| product | [`product-research`](../skills/product/product-research/) | research-preview | 0.1.0 | @jonathankv | Guide product research — user research, market research, competitive analysis, PMF assessment. |
+| product | [`product-strategy`](../skills/product/product-strategy/) | research-preview | 0.1.0 | @jonathankv | Product strategy advisor for vision, competitive moats, positioning, pricing, and strategic bets. |
 | shared | [`example-skill`](../skills/shared/example-skill/) | stable | 1.0.0 | @jonathankv | Reference example showing correct frontmatter + structure for momo-ai-kit skills. |
 | shared | [`synthesis-writer`](../skills/shared/synthesis-writer/) | stable | 1.0.0 | @jonathankv | Write structured synthesis from raw inputs (meeting transcripts, research articles, YouTube, papers). |
 

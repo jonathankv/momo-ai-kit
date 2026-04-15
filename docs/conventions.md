@@ -64,12 +64,13 @@ Tách ra vì: catalog cần ngắn, trigger cần dài + rõ negative cases.
 ### `status` lifecycle
 
 ```
-experimental → beta → stable → deprecated
+experimental → research-preview → beta → stable → deprecated
 ```
 
 - **experimental**: chưa tested, dùng tự chịu rủi ro
-- **beta**: tested bởi team owner, chờ feedback
-- **stable**: production-ready
+- **research-preview**: skill working nhưng chưa cross-team validated — cần feedback
+- **beta**: tested bởi team owner, chờ broader feedback
+- **stable**: production-ready, đã được nhiều người dùng
 - **deprecated**: có replacement, sẽ EOL
 
 Install script **skip `deprecated`** — không symlink vào `~/.claude/`.
