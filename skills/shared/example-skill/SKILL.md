@@ -5,7 +5,7 @@ trigger: |
   TRIGGER when user explicitly asks about: "example skill", "skill template reference".
   This is a reference skill, not a working skill.
   SKIP all other cases — this is purely documentation.
-owner: "@jonathanvu"
+owner: "@jonathankv"
 status: stable
 version: 1.0.0
 last_reviewed: 2026-04-15

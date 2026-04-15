@@ -7,7 +7,7 @@ trigger: |
   "synthesize transcript này", "tổng hợp research article".
   SKIP when: user wants raw verbatim transcript, quick summary (<200 words), or slide outline
   — those are different jobs.
-owner: "@jonathanvu"
+owner: "@jonathankv"
 status: stable
 version: 1.0.0
 last_reviewed: 2026-04-15

@@ -1,6 +1,6 @@
 # example-skill
 
-> **Status:** stable • **Owner:** @jonathanvu
+> **Status:** stable • **Owner:** @jonathankv
 
 ## What this does
 

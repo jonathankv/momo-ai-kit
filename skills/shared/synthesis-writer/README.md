@@ -1,6 +1,6 @@
 # synthesis-writer
 
-> **Status:** stable • **Owner:** @jonathanvu • **v1.0.0**
+> **Status:** stable • **Owner:** @jonathankv • **v1.0.0**
 
 ## What this does
 

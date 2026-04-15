@@ -123,5 +123,5 @@ Không bao giờ `git rm` skill người khác. Chỉ đổi `status: deprecated
 ## Questions?
 
 - General: Slack `#ai-kit`
-- Skill structure: `@jonathanvu`
+- Skill structure: `@jonathankv`
 - Governance change proposal: open issue với label `governance`

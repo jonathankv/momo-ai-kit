@@ -3,27 +3,27 @@
 # Chỉ settings/ và install.sh cần owner approve (impact rộng).
 
 # Default — repo owner review (fallback)
-*                       @jonathanvu
+*                       @jonathankv
 
 # Team folders — replace với team handles thực tế
-/skills/product/        @jonathanvu
-/skills/engineering/    @jonathanvu
-/skills/data/           @jonathanvu
-/skills/risk/           @jonathanvu
-/skills/marketing/      @jonathanvu
-/skills/design/         @jonathanvu
+/skills/product/        @jonathankv
+/skills/engineering/    @jonathankv
+/skills/data/           @jonathankv
+/skills/risk/           @jonathankv
+/skills/marketing/      @jonathankv
+/skills/design/         @jonathankv
 
 # Shared skills — cần thêm review vì impact cross-team
-/skills/shared/         @jonathanvu
+/skills/shared/         @jonathankv
 
 # Agents — theo team
-/agents/product/        @jonathanvu
-/agents/engineering/    @jonathanvu
-/agents/shared/         @jonathanvu
+/agents/product/        @jonathankv
+/agents/engineering/    @jonathankv
+/agents/shared/         @jonathankv
 
 # Impact rộng — cần owner approve
-/settings/              @jonathanvu
-/scripts/install.sh     @jonathanvu
-/scripts/uninstall.sh   @jonathanvu
-/.github/               @jonathanvu
-/docs/conventions.md    @jonathanvu
+/settings/              @jonathankv
+/scripts/install.sh     @jonathankv
+/scripts/uninstall.sh   @jonathankv
+/.github/               @jonathankv
+/docs/conventions.md    @jonathankv
