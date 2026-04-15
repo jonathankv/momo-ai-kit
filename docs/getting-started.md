@@ -101,29 +101,38 @@ Xem [CONTRIBUTING.md](CONTRIBUTING.md) — quy trình đầy đủ.
 
 ## Bạn sẽ dùng thế nào trong công việc hàng ngày?
 
+### Nếu bạn là PM (✅ có sẵn nhiều skill)
+
+- `/product-manager` — advisor cho prioritization, metrics, experiment design
+- `/product-discovery` — framing problem, sizing opportunity, viết discovery brief
+- `/product-research` — plan user research, synthesize interviews, đánh giá PMF
+- `/product-strategy` — vision, moats, positioning, pricing
+- `/product-growth` — retention, acquisition, PLG, growth loops
+- `/jtbd` — phân tích Jobs to Be Done cho feature
+- `/decision-making` — framework để quyết định tốt hơn, design experiment
+- `/synthesis-writer` — viết meeting note/retro/research synthesis
+
+> **Lưu ý:** 7 product skill đang ở status `research-preview` — working nhưng cần feedback. Thử và report lại [qua issue](https://github.com/jonathankv/momo-ai-kit/issues/new/choose) giúp graduate lên `stable`.
+
 ### Nếu bạn là Designer
 
-- Dùng skill review design theo MoMo Design System (coming soon)
-- Generate design specs từ Figma link (coming soon)
-- Contribute: skill tóm tắt design critique
-
-### Nếu bạn là PM
-
-- Dùng `synthesis-writer` để viết meeting note/retro
-- Skill draft OKR, PRD (coming soon)
-- Contribute: skill convert user feedback → feature spec
+- `/synthesis-writer` — viết design critique summary
+- *Đang chờ đóng góp*: skill review design theo MoMo Design System, generate specs từ Figma
+- Contribute: [đề xuất skill mới](https://github.com/jonathankv/momo-ai-kit/issues/new/choose)
 
 ### Nếu bạn là Marketer
 
-- Skill brand tone check (coming soon)
-- Skill generate social post từ blog post (coming soon)
-- Contribute: skill A/B test copy variants
+- `/jtbd` — hiểu customer job để viết copy accurate hơn
+- `/product-research` — plan market research, competitive analysis
+- *Đang chờ đóng góp*: skill brand tone check, generate social post từ blog
+- Contribute: [đề xuất skill mới](https://github.com/jonathankv/momo-ai-kit/issues/new/choose)
 
 ### Nếu bạn là Engineer
 
-- Skill code review theo convention MoMo (coming soon)
-- Skill generate commit message theo format team
-- Contribute: skill cho bất kỳ workflow lặp lại nào
+- `/decision-making` — design technical experiments, pre-mortem
+- `/synthesis-writer` — tech meeting note, architecture review synthesis
+- *Đang chờ đóng góp*: skill code review theo convention MoMo, commit message format
+- Contribute: easy entry point vì bạn đã quen git/markdown → xem [CONTRIBUTING.md](CONTRIBUTING.md)
 
 ---
 

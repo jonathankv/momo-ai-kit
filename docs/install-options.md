@@ -49,14 +49,6 @@ cd ~/momo-ai-kit && ./scripts/uninstall.sh
 
 ---
 
-## Cách 3: Homebrew (coming soon)
-
-Kế hoạch: `brew install jonathankv/momo/ai-kit` — 1 dòng duy nhất.
-
-Chưa triển khai vì cần tạo tap repo riêng. Sẽ update khi xong.
-
----
-
 ## Troubleshooting
 
 ### "Command not found: git"
