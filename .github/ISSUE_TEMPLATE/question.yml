@@ -1,0 +1,20 @@
+name: ❓ Câu hỏi / cần giúp đỡ
+description: Bạn có câu hỏi về repo, skill, hoặc Claude Code
+title: "[Q] "
+labels: ["question"]
+body:
+  - type: textarea
+    id: question
+    attributes:
+      label: Câu hỏi của bạn
+      description: Mô tả tự nhiên, không cần format kỹ
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Context (optional)
+      description: Bạn đang cố làm gì? Đã thử gì?
+    validations:
+      required: false

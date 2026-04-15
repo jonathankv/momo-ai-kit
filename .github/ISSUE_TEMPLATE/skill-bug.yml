@@ -1,0 +1,48 @@
+name: 🐛 Skill bị lỗi / hoạt động sai
+description: Báo 1 skill hiện có đang hoạt động không đúng
+title: "[Bug] <tên skill>: "
+labels: ["bug", "needs-triage"]
+body:
+  - type: input
+    id: skill-name
+    attributes:
+      label: Skill nào bị lỗi?
+      placeholder: "VD: synthesis-writer"
+    validations:
+      required: true
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: Bạn đã làm gì?
+      description: Mô tả step-by-step. Bạn gõ gì, paste gì, bấm gì?
+      placeholder: |
+        1. Mở Claude Code
+        2. Gõ /synthesis-writer
+        3. Paste transcript meeting 20 phút vào
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Bạn mong Claude làm gì?
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Claude thực tế làm gì?
+      description: Paste output bị lỗi (hide thông tin nhạy cảm nếu có)
+    validations:
+      required: true
+
+  - type: input
+    id: claude-version
+    attributes:
+      label: Phiên bản Claude Code (nếu biết)
+      description: Chạy `claude --version` trong terminal
+      placeholder: "VD: 1.2.3"
+    validations:
+      required: false

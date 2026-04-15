@@ -1,0 +1,120 @@
+name: 💡 Đề xuất skill mới
+description: Bạn có ý tưởng skill hữu ích? Điền form này, không cần biết code.
+title: "[Skill Request] "
+labels: ["skill-request", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Cảm ơn bạn đã đề xuất! Điền form dưới đây, maintainer sẽ liên hệ trong 2-3 ngày làm việc.
+
+        **Không cần biết code.** Bạn chỉ cần mô tả vấn đề và mong muốn. Engineer sẽ giúp hiện thực hoá.
+
+  - type: input
+    id: role
+    attributes:
+      label: Bạn là ai?
+      description: Designer / PM / Marketer / Engineer / ... (optional)
+      placeholder: "VD: Product Manager team Growth"
+    validations:
+      required: false
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Vấn đề bạn đang gặp
+      description: Mô tả bằng ngôn ngữ tự nhiên. Task gì bạn làm lặp đi lặp lại? Mất bao lâu mỗi lần?
+      placeholder: |
+        VD: Mỗi tuần tôi phải viết weekly report cho team. Tốn ~1h vì phải đọc lại Slack thread, Linear ticket, meeting note rồi tóm tắt thành format cố định cho sếp.
+    validations:
+      required: true
+
+  - type: textarea
+    id: desired-outcome
+    attributes:
+      label: Bạn muốn Claude giúp bạn làm gì?
+      description: Nếu có 1 "magic button", bấm vào và Claude làm hết — nó làm gì?
+      placeholder: |
+        VD: Tôi paste Slack link + Linear query + meeting note vào. Claude tự đọc, tổng hợp, xuất ra weekly report theo đúng template của team (có sections: Shipped / In Progress / Blocked / Next Week).
+    validations:
+      required: true
+
+  - type: textarea
+    id: example-input
+    attributes:
+      label: Ví dụ input (nếu có)
+      description: Paste ví dụ raw input bạn hay có (Slack message, email, doc snippet...). Không cần format đẹp.
+      placeholder: |
+        VD:
+        - Slack: "@here deploy done, new dashboard live at dash.momo.com"
+        - Linear: MOMO-123 "Add filter to dashboard" — Done
+        - Meeting note: "bàn về H2 roadmap, quyết định prioritize X trước Y"
+    validations:
+      required: false
+
+  - type: textarea
+    id: example-output
+    attributes:
+      label: Ví dụ output mong muốn (nếu có)
+      description: Output lý tưởng Claude trả về. Càng cụ thể càng tốt.
+      placeholder: |
+        VD:
+        ## Weekly Report — Week 15
+        ### Shipped
+        - Dashboard filter (MOMO-123)
+        ### Decisions
+        - H2 roadmap: prioritize X over Y
+        ### Next week
+        - ...
+    validations:
+      required: false
+
+  - type: dropdown
+    id: team
+    attributes:
+      label: Skill này thuộc team nào?
+      description: Nếu không chắc, chọn "Không biết" — maintainer sẽ route
+      options:
+        - Không biết
+        - Product
+        - Engineering
+        - Data
+        - Risk
+        - Marketing
+        - Design
+        - Shared (dùng chung nhiều team)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: frequency
+    attributes:
+      label: Bạn sẽ dùng bao lâu 1 lần?
+      description: Giúp maintainer ưu tiên
+      options:
+        - Hàng ngày
+        - Vài lần/tuần
+        - Vài lần/tháng
+        - Một vài lần/năm
+        - Không biết
+    validations:
+      required: true
+
+  - type: input
+    id: similar-skill
+    attributes:
+      label: Đã có skill nào tương tự chưa?
+      description: Check qua [catalog](../../blob/main/docs/catalog.md). Nếu có skill gần giống, note lại để maintainer improve thay vì tạo mới.
+      placeholder: "VD: synthesis-writer có phần nào giống, nhưng không đủ cho weekly report"
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Checklist cuối
+      options:
+        - label: Tôi đã check qua [catalog](../../blob/main/docs/catalog.md), chưa có skill nào làm đúng việc này
+          required: true
+        - label: Tôi sẵn sàng pair với engineer để test skill khi có draft
+          required: true

@@ -1,71 +1,109 @@
 # momo-ai-kit
 
-Shared repository of Claude Code **skills**, **agents**, **slash commands**, **hooks**, và **settings** cho MoMo.
+**Bộ công cụ AI dùng chung cho team MoMo** — skills, agents, commands giúp công việc hàng ngày nhanh hơn.
 
-## Quick Start
+Không cần biết code để dùng. Chỉ cần Claude Code đã cài trên máy.
+
+---
+
+## Đây là gì? (30 giây)
+
+Bạn đã dùng Claude chưa? Thử nghĩ: thay vì mỗi lần mở Claude phải giải thích lại "viết synthesis theo format này, với bullet point thế này, kèm action items...", bạn **gõ 1 câu ngắn** và Claude tự biết phải làm gì.
+
+Đó là **skill** — hướng dẫn viết sẵn, Claude đọc và làm theo. Repo này chứa skills dùng chung cho cả team MoMo:
+
+- Viết synthesis cho meeting? → Skill `synthesis-writer` làm theo đúng format MoMo
+- Review code theo convention MoMo? → Skill `code-reviewer-momo`
+- Draft OKR? → Skill `okr-draft-helper`
+- ... (càng nhiều người đóng góp, càng nhiều skill)
+
+Thay vì mỗi người tự giữ một bộ prompt riêng trong Notion/Google Doc → **1 chỗ chung, ai cũng dùng được, ai cũng đóng góp được**.
+
+---
+
+## Bạn là ai? Bắt đầu từ đâu?
+
+### 🎨 Designer / PM / Marketer / Non-tech
+
+**Bạn chỉ cần 2 việc:**
+
+1. **Dùng skill đã có** → đọc [Getting Started](docs/getting-started.md) (5 phút)
+2. **Đề xuất skill mới** → điền [form này](https://github.com/jonathankv/momo-ai-kit/issues/new/choose) (không cần biết code)
+
+Xem danh sách skill hiện có: [docs/catalog.md](docs/catalog.md)
+
+### 👨‍💻 Engineer / Power user
+
+**Clone repo + install:**
 
 ```bash
-git clone <repo-url> momo-ai-kit
+git clone https://github.com/jonathankv/momo-ai-kit.git
 cd momo-ai-kit
 ./scripts/install.sh
 ```
 
-Install script symlink tất cả skills/agents/commands vào `~/.claude/`. Chạy lại sau mỗi `git pull` là KHÔNG cần — symlink trỏ về repo, `git pull` tự hiện update.
+Symlink skills/agents/commands vào `~/.claude/`. `git pull` sau đó = update tự động.
 
-## Structure
-
-```
-momo-ai-kit/
-├── skills/<team>/<skill-slug>/       # SKILL.md + references/
-├── agents/<team>/<agent-slug>.md
-├── commands/<cmd-slug>.md            # /slash-commands
-├── hooks/                            # shared hooks (settings.json snippets)
-├── settings/momo-base.json           # MCP, permissions, env mặc định
-├── templates/                        # scaffold cho skill/agent mới
-├── scripts/
-│   ├── install.sh                    # symlink → ~/.claude/
-│   ├── uninstall.sh
-│   ├── doctor.sh                     # check symlinks + frontmatter
-│   ├── new-skill.sh <team> <slug>    # scaffold skill mới
-│   └── build-catalog.sh              # render docs/catalog.md
-├── docs/
-│   ├── CONTRIBUTING.md
-│   ├── conventions.md
-│   └── catalog.md                    # auto-generated
-└── .github/
-    ├── CODEOWNERS
-    └── workflows/validate.yml
-```
-
-## Tạo skill mới (30 giây)
+**Đóng góp skill mới:**
 
 ```bash
-./scripts/new-skill.sh risk fraud-pattern-detector
-# → skills/risk/fraud-pattern-detector/SKILL.md đã có sẵn
-# Edit file đó, commit, push. Xong.
+./scripts/new-skill.sh <team> <slug>
+# Edit SKILL.md, commit, push PR
 ```
 
-## Contributing
+Đọc [CONTRIBUTING.md](docs/CONTRIBUTING.md) để biết convention.
 
-Rule cứng (CI block nếu vi phạm):
-1. Frontmatter hợp lệ: `name`, `description`, `trigger`, `owner`, `status`
-2. Có owner (team hoặc email)
-3. KHÔNG xoá skill người khác — chỉ mark `status: deprecated`
+---
 
-Rule mềm (khuyến khích):
-- SKILL.md < 400 lines (progressive disclosure — đẩy detail vào `references/`)
-- Có ít nhất 1 ví dụ TRIGGER và 1 ví dụ SKIP
-- Bump version khi breaking change, v1/v2 coexist (không sửa v1)
+## Đang có gì trong kit?
 
-Chi tiết: [docs/CONTRIBUTING.md](docs/CONTRIBUTING.md) • [docs/conventions.md](docs/conventions.md)
+Xem [**catalog đầy đủ**](docs/catalog.md) — auto-generate từ repo.
 
-## Catalog
+Sample:
+- `synthesis-writer` — Viết synthesis cho meeting/research/YouTube theo format chuẩn
+- `example-skill` — Reference skill để học cấu trúc
 
-Xem [docs/catalog.md](docs/catalog.md) — auto-generated từ frontmatter.
+(Sẽ nhiều hơn khi team đóng góp.)
 
-## Governance (hiện tại: light touch)
+---
 
-- Mọi người được merge vào skill của team mình
-- `settings/` và `scripts/install.sh` cần owner approve (impact rộng)
-- CODEOWNERS: `.github/CODEOWNERS`
-- Stale skills (last_reviewed > 6 tháng) → weekly bot flag, không auto-delete
+## Câu hỏi thường gặp
+
+### "Tôi không biết code, dùng được không?"
+
+Được. Bạn chỉ cần Claude Code đã cài. Nhờ 1 engineer trong team giúp `./scripts/install.sh` 1 lần duy nhất. Sau đó skill tự hiện trong Claude.
+
+### "Skill này khác prompt thường thế nào?"
+
+Prompt = viết mỗi lần. Skill = viết 1 lần, ai trong team cũng dùng được, Claude tự match khi context phù hợp.
+
+### "Tôi có ý tưởng skill nhưng không biết viết. Làm sao?"
+
+Điền [form này](https://github.com/jonathankv/momo-ai-kit/issues/new/choose) → mô tả vấn đề bạn muốn giải quyết → engineer trong team sẽ giúp viết.
+
+### "Ai quản lý repo này?"
+
+Hiện tại: @jonathankv. Mỗi team sẽ tự maintain folder của mình khi grow. Xem [CODEOWNERS](.github/CODEOWNERS).
+
+### "Tôi muốn thử nhưng sợ làm hỏng?"
+
+Không hỏng được. Skills là file markdown đọc-only khi chạy. Nếu xoá nhầm → `./scripts/install.sh` lại là xong.
+
+---
+
+## Learn more
+
+- [Getting Started cho non-tech](docs/getting-started.md) — 5 phút
+- [Contributing guide](docs/CONTRIBUTING.md) — quy trình đóng góp
+- [Conventions](docs/conventions.md) — naming, format, checklist
+- [Catalog](docs/catalog.md) — tất cả skills/agents hiện có
+
+---
+
+## Philosophy
+
+> "Tools become infrastructure when everyone uses them without thinking about them."
+
+Mục tiêu: trong 6 tháng, mỗi người MoMo có ít nhất 1 skill họ dùng hàng tuần, không cần nhớ tên skill là gì.
+
+Cách làm: **low friction để dùng, low friction để đóng góp**. Governance nhẹ, quality check tự động, documentation luôn up-to-date.

@@ -1,0 +1,25 @@
+title: momo-ai-kit
+description: Bộ công cụ AI dùng chung cho team MoMo
+theme: jekyll-theme-cayman
+show_downloads: false
+baseurl: ""
+url: "https://jonathankv.github.io/momo-ai-kit"
+
+plugins:
+  - jekyll-relative-links
+
+relative_links:
+  enabled: true
+  collections: true
+
+include:
+  - CONTRIBUTING.md
+  - getting-started.md
+  - conventions.md
+  - catalog.md
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
